@@ -1,0 +1,63 @@
+doctype html
+html.no-js(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        title The End Academy
+        meta(name='description', content='My name is  Isabella, the owner & photographer of Isabella photography. I am based in San Francisco, United States.')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // Place favicon.ico in the root directory
+        link(rel='apple-touch-icon', sizes='57x57', href='img/apple-icon-57x57.png')
+        link(rel='apple-touch-icon', sizes='60x60', href='img/apple-icon-60x60.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='img/apple-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='76x76', href='img/apple-icon-76x76.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='img/apple-icon-114x114.png')
+        link(rel='apple-touch-icon', sizes='120x120', href='img/apple-icon-120x120.png')
+        link(rel='apple-touch-icon', sizes='144x144', href='img/apple-icon-144x144.png')
+        link(rel='apple-touch-icon', sizes='152x152', href='img/apple-icon-152x152.png')
+        link(rel='apple-touch-icon', sizes='180x180', href='img/apple-icon-180x180.png')
+        link(rel='icon', type='image/png', sizes='192x192', href='img/android-icon-192x192.png')
+        link(rel='icon', type='image/png', sizes='32x32', href='img/favicon-32x32.png')
+        link(rel='icon', type='image/png', sizes='96x96', href='img/favicon-96x96.png')
+        link(rel='icon', type='image/png', sizes='16x16', href='img/favicon-16x16.png')
+        link(rel='manifest', href='img/manifest.json')
+
+        meta(property="og:description", content="My name is  Isabella, the owner & photographer of Isabella photography. I am based in San Francisco, United States.")
+        meta(property="og:image", name="thumb", content="img/og.jpg")
+        meta(property="og:title", content="Isabella – Interactive Digital Experiences")
+        meta(property="og:type", content="website")
+        meta(property="og:url", content="http://adatheme.com")
+        meta(property="og:site_name", content="Isabella – Interactive Digital Experiences")
+        meta(name="description", content="My name is  Isabella, the owner & photographer of Isabella photography. I am based in San Francisco, United States.")
+
+        meta(name="twitter:card", content="summary_large_image")
+        meta(name="twitter:site", content="http://adatheme.com")
+        meta(name="twitter:creator", content="@adatheme")
+        meta(name="twitter:title", content="Isabella – Interactive Digital Experiences")
+        meta(name="twitter:description", content="The work of Interactive Art Director and Designer Isabella.")
+        meta(name="twitter:image:src", content="img/og.jpg")
+
+        
+        meta(name='msapplication-TileColor', content='#2c3e50')
+        meta(name='msapplication-TileImage', content='img/ms-icon-144x144.png')
+        meta(name='theme-color', content='#2c3e50')
+        link(rel="stylesheet",
+             href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css",
+             type="text/css")
+        link(href="https://fonts.googleapis.com/css?family=Arimo:400,700|Roboto:300,400,500,700,900", rel="stylesheet")
+        link(href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css',
+             rel='stylesheet')
+        link(rel='stylesheet', href='css/style.css')
+    body
+        header.header#header
+           .header__top
+                h1
+                    a(href="index.html",class="logo", title="The End Academy")
+                a(href="#",class="icon-nav" id="togle-nav")
+                    span
+                    span
+                    span
+                // Incluimos el menu de navegación
+                include navegation.pug
+        
+                    

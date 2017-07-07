@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    $HELPERS
+\*------------------------------------*/
+
+.active
+	background-color $basecolor
+	text-decoration none
+	transform: translate3d(0, 0, 0);
+	
+
+
+.box
+	box-sizing: border-box;
+	margin-left auto
+	margin-right auto
+	max-width 1261px
+	overflow hidden
+	padding 2rem 0.5rem
+	&--bottom-padding
+		padding-bottom 0
+	&--work
+		max-width 820px
+
+.list-none
+	list-style none
+	margin 0
+
+.margin
+	&--big
+		margin $gutterwidth  0
+	&--small
+		margin $gutterwidth - 20px 0
+
+.img-responsive
+	height auto
+	max-width 100%
+	width 100%
+
+.text
+	display block
+	&-center
+		text-align center
+	&-right
+		text-align right
+	&-white
+		color $white
+	&--basecolor
+		color $basecolor
+	&--uppercase
+		text-transform uppercase
+
+.z-index-uno
+	z-index 1
+
+.icon-bottom
+	absolute bottom 50px left 50%
+	animation: anim2 ease-in-out 3s infinite alternate
+	margin-left -25px
+	text-align center
+	width 40px
+	z-index 5
+
+	a
+		color $white
+		i
+			font-size 1.8rem
+
+@keyframes anim2
+{
+   from {left: 50%; transform: scale(1.0) rotate(0deg)   }
+   50%  {left: 50.5%; transform: scale(0.9) rotate(10deg)  }
+   to   {left: 49.5%; transform: scale(1.1) rotate(-20deg) }
+}
+
+.color-warning
+	background-color $color-error
+	color $white
+
+
+
+
+
+
+

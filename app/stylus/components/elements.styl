@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    $ELEMENTS
+\*------------------------------------*/
+
+
+::selection
+	background $basecolor
+	color $white
+
+
+hr
+	border 0
+	border-top 1px solid $bordercolor
+	clear both
+	display block
+	height 1px
+	margin $baselineheight * 2 0
+	padding  0
+
+/*------------------------------------*\
+    $ELEMENTS-IMAGES
+\*------------------------------------*/
+img
+	-ms-interpolation-mode bicubic
+	border-width 0
+	max-width 100%
+	vertical-align middle
+
+
+.img--rounded
+	border-radius $radius * 4
+
+
+.img--polaroid
+	background-color $white
+	border 1px solid $bordercolor
+	box-shadow 0 1px 3px rgba(0,0,0,.1)
+	padding $gutterwidth / 2
+
+
+.img--circle
+	border-radius 100%
+
+
+/*------------------------------------*\
+    $ELEMENTS-FIGURE
+\*------------------------------------*/
+figure
+	margin-bottom $baselineheight
+
+	img
+		margin-bottom $baselineheight / 4
+
+
+	figcaption
+		color $grey
+		display block
+		font-size 16px
+		font-style italic
+		font-weight normal
+
+/*------------------------------------*\
+    $ELEMENTS-UL
+\*------------------------------------*/
+
+ul
+	list-style-image url("img/lista.png")
+	li
+		padding 0.1rem 0
+
+
+ul.post-categories
+	display-inline-block()
+	padding 0
+	li
+		list-style none
+		display-inline-block()
+
+/*------------------------------------*\
+    $WORDPRESS-ELEMENTS
+\*------------------------------------*/
+
+
+.alignnone,
+img.alignnone
+	float none
+	image-responsive-post()
+
+.alignleft,
+img.alignleft
+	display inline
+	float left
+	image-responsive-post()
+	margin-right 1.5em
+
+.alignright,
+img.alignright
+	display inline
+	float right
+	image-responsive-post()
+	margin-left 1.5em
+
+.aligncenter,
+img.aligncenter
+	clear both
+	display block
+	image-responsive-post()
+	margin-left auto
+	margin-right auto

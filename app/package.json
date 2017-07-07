@@ -1,0 +1,26 @@
+{
+  "name": "isabella",
+  "version": "1.0.0",
+  "description": "Theme Isabella - ThemeForest",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ThemeForest"
+  ],
+  "author": "@yavallejo - AdaTheme",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0",
+    "nib": "^1.1.2",
+    "rupture": "^0.6.2"
+  }
+}

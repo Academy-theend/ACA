@@ -1,0 +1,371 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+form
+	margin 0 0 $baselineheight 0
+
+	fieldset
+		border-width 0
+		margin-bottom $baselineheight
+		padding 0
+
+
+	legend
+		border 0
+		border-bottom $inputborderwidth $inputborderstyle $inputborder
+		color $textcolor
+		display block
+		margin-bottom $baselineheight * 2
+		padding 0
+		white-space normal
+		width 100%
+
+		small
+			font-size 14px
+		    color  $lightgrey
+
+
+
+	p
+		margin-bottom : $baselineheight / 2
+
+
+	ul
+		list-style-type : none
+		margin : 0 0 $baselineheight 0
+		padding : 0
+
+
+	br
+		display : none
+
+label,
+input,
+button,
+select,
+textarea
+	border-radius: $radius
+	font-size 1rem
+	vertical-align baseline
+
+
+
+input,
+button,
+select,
+textarea
+	box-sizing border-box
+	font-family $basefont
+
+
+label
+	color  $textcolor
+	cursor  pointer
+	display  block
+	font-weight  bold
+	margin-bottom  $baseline / 8
+
+	input,
+	textarea,
+	select
+		display block
+
+
+
+input,
+textarea,
+select
+	background-color $inputbackground
+	border $inputborderwidth $inputborderstyle $inputborder
+	color $textcolor
+	display inline-block
+	margin-bottom $baselineheight / 4
+	padding 4px
+	width 100%
+
+	&:hover
+		border-color $inputhover
+
+
+
+.input-mini
+	width 60px
+
+
+.input-small
+	width 90px
+
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"]
+	border  0 \9
+	cursor  pointer
+	height  auto
+	line-height  normal
+	margin  3px 0
+	padding  0
+	width  auto
+
+
+input[type="checkbox"],
+input[type="radio"]
+	box-sizing border-box
+	padding  0
+
+
+
+input[type="image"]
+	border  0
+	box-shadow none
+
+
+input[type="file"]
+	background-color  initial
+	background-color  transparent
+	border  initial
+	box-shadow none
+	color white
+	line-height  initial
+	padding  initial
+	width  auto
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+	*overflow  visible
+	cursor  pointer
+	height  auto
+	width  auto
+
+
+select,
+input[type="file"]
+	*margin-top  4px
+	height  28px
+	line-height  28px
+
+
+select
+	background-color $inputbackground
+	font-size 13px
+
+
+select[multiple],
+select[size]
+	height  auto
+
+
+textarea
+	overflow  auto
+	vertical-align  top
+    height  auto
+
+
+input[type="hidden"]
+	display  none
+
+
+.radio,
+.checkbox
+	font-weight  normal
+	padding-left  18px
+
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"]
+	float  left
+	margin-left  -18px
+
+
+.radio.inline,
+.checkbox.inline
+	display  inline-block
+	margin-bottom  0
+	padding-top  5px
+	vertical-align  middle
+
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline
+	margin-left : 10px
+
+
+// disabled
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly]
+	cursor : not-allowed
+	opacity .5
+
+
+/*------------------------------------*\
+    $FOCUS - ACTIVE
+\*------------------------------------*/
+
+input:focus,
+textarea:focus
+	border-color $inputfocus
+	outline 0
+	outline thin dotted \9
+
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus
+	box-shadow none
+
+
+::-webkit-input-placeholder
+	font-size 14px
+
+
+input:-moz-placeholder
+	font-size 14 px
+
+
+/*------------------------------------*\
+    $HELP-TEXT
+\*------------------------------------*/
+
+.help-block,
+.help-inline
+	color $grey
+
+
+.help-block
+	display block
+	margin-bottom $baselineheight / 2
+
+
+.help-inline
+	display inline-block
+	padding-left 5px
+	vertical-align middle
+
+
+/*------------------------------------*\
+    $FORM.INLINE
+\*------------------------------------*/
+
+.form-inline input,
+.form-inline textarea,
+.form-inline select
+	display inline-block
+	margin-bottom 0
+
+
+.form-inline label
+	display inline-block
+
+
+.form-inline .radio,
+.form-inline .checkbox,
+.form-inline .radio
+	margin-bottom 0
+	padding-left 0
+	vertical-align middle
+
+
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"]
+	float left
+	margin-left 0
+	margin-right 3px
+
+
+/*------------------------------------*\
+    $FORM SEARCH
+\*------------------------------------*/
+
+.form-search input,
+.form-search textarea,
+.form-search select
+	display inline-block
+	margin-bottom 0
+
+
+.form-search .search-query
+	margin-bottom 0
+	padding-left 14px
+	padding-right 14px
+
+
+.form-search label
+	display inline-block
+
+
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio
+	margin-bottom 0
+	padding-left 0
+	vertical-align middle
+
+
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"]
+	float left
+	margin-left 0
+	margin-right 3px
+
+/*------------------------------------*\
+    $FORM CONTROL
+\*------------------------------------*/
+
+.form
+	wide-max(1024px, 100%)
+	display flex
+	justify-content space-between
+	margin-top 2rem
+	flex-wrap wrap
+	&--control
+		height 40px
+		margin 0.3rem 0
+		padding 0.5rem
+		+above($bp3)
+			margin 0.5rem 0
+			width 31%
+	.btn
+		margin 1rem auto
+
+textarea.form--control
+	height 220px
+	width: 100%
+
+
+input:required:focus:invalid
+	background-color lighten($color-alert, 5%)
+	border 1px solid $color-alert
+
+input:required:focus:valid
+	background-color lighten($color-success, 40%)
+	border 1px solid $color-success
+
+
+
+/*------------------------------------*\
+    $We edit the styles of the Contact Form
+\*------------------------------------*/
+
+
+span.wpcf7-not-valid-tip
+	font-size 1rem
+	font-weight bold
+
+div.wpcf7-validation-errors
+	border-color $basecolor
+	font-size 1rem
+
+.form
+	span.wpcf7-not-valid-tip
+		color $white
+	div.wpcf7-validation-errors
+		border-color $white
+
