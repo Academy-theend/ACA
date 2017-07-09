@@ -2,13 +2,24 @@
     $MIXINS
 \*------------------------------------*/
 
+box()
+	box-sizing: border-box;
+	margin-left auto
+	margin-right auto
+	max-width 1261px
+	// overflow hidden
+	padding 5rem 0.5rem
 
+box-interno()
+	padding-left 0
+	padding-right 0
 
-wide-max(max-width, pagemaxwitdh)
+wide-max(max-width)
 	margin-left auto
 	margin-right auto
 	max-width max-width
 	width 100%
+	display block
 
 display-inline-block()
 	display inline-block
@@ -19,10 +30,12 @@ display-inline-block()
 image-responsive-post()
 	max-width 100%
 	height auto
+	width 100%
 
-box-interno()
-	padding-left 0
-	padding-right 0
+gradiente()
+	background linear-gradient(left, $basecolor 0%, $basecolor-light 50%,  $basecolor 100%)
+
+
 
 
 

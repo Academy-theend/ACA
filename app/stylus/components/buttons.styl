@@ -10,7 +10,7 @@
  * .Btn is the main class for defining a button
  */
 .btn
-	background-color $buttonbackground
+	background-color transparent
 	border none
 	border-radius $radius
 	color $textcolor
@@ -32,17 +32,7 @@
    	padding-left 1em
    	padding-right 1em
 
-	&--center
-		margin 0 auto
-		width 160px
-		display block
-		color $white
-		&--big
-			width 100%
-			max-width 245px
-			margin-top 20px
-			margin-bottom 5px
-			font-size 1.3rem
+	
 		
 
 
@@ -96,15 +86,7 @@
  * Variants of the buttons: color to give feelings.
  */
 
-.closebt
-	cursor pointer
-	transition all 0.2s
 
-	&:hover
-		transform rotate(90deg)
-
-.close-animatedModal
-	padding-top 200px
 
 
 
@@ -115,24 +97,8 @@ input[type="submit"].btn:hover
 	border-color $buttonbordercolor
 
 
-/**
-* Button Slider
-*/
-.btn--slider
-	background-color transparent
-	border 2px solid $basecolor
-	font-size 1.2rem
-	padding-left 1rem
-	padding-right 1rem
-	&:hover
-		background-color transparent
-	&--white
-		border 2px solid $white
-		max-width 150px
-		color $white
-		&:visited
-			color $white
-			border 2px solid $white
+
+	
 
 /**
 * Button not available
@@ -174,10 +140,17 @@ input[type="submit"].btn:hover
 */
 
 .btn--primary
-	background-color $basecolor
-	color $white
-	font-size 1.15rem
-	padding 0 1rem
+	background-color transparent
+	border 2px solid $basecolor
+	font-size 1.2rem
+	padding 0.2rem 1rem
+	color $basecolor-light
+	border-radius 0
+	wide-max(200px)
+	+above($bp1)
+		wide-max(250px)
+		padding 0.2rem 3rem
+	
 
 
 	&:hover,
@@ -189,8 +162,10 @@ input[type="submit"].btn:hover
 */
 
 .btn--success
-	background-color $color-success
-	color darken($color-success, 40%)
+	border 3px solid $color-success
+	color $color-success
+	font-size 2rem
+	line-height 1.5 !important
 	&:hover
 		color lighten($color-success, 40%)
 

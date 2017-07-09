@@ -55,62 +55,139 @@ body
 			margin-top 0.5rem
 			font-family $altfont
 			font-weight 700
+
+.enterate
+	background-color #eeeeee
+	.box
+		box-interno()
+		display flex
+		flex-direction column
+		+above($bp4)
+			flex-direction row
+	&__caja
+		
+		+above($bp4)
+			flex 1 1 49%
+			
+		&--izquierdo
+			background-color $white
+			margin-bottom 1rem
+			padding 2rem 1rem
+			figure
+				display flex
+				flex-direction column
+			
+		&--derecho
+			article
+				background-color $white
+				display flex
+				margin 1rem 0
+				flex-direction column
+				padding 2rem 1rem
+				&:first-child
+					margin-top 0
+				+above($bp4)
+					flex-direction row-reverse
+
+				
 			
 
-.footer
-	&__map
-		overflow hidden
-	&__form
-		background-color $basecolor-light
-		flex 1
-		font-size 1.2rem
-		padding 5rem 3rem
-		h6
-			margin-bottom 1rem
-	.information
-		.box
-			display flex
-			flex-wrap wrap
-			justify-content space-around
-			padding 3rem 0
-		&__item
+.estadisticas
+	background-image url("../img/estadisticas.jpg")
+	background-size cover
+	background-position center center
+	width 100%
+	color $white
+	.box
+		box-interno()
+		display flex
+		padding 0
+		flex-direction column
+		+above($bp4)
+			flex-direction row
+	&__caja
+		padding 2.5rem 0
+		+above($bp4)
+			flex 1 1 40%
+			&:last-child
+				flex-basis 60%
+	&__opacidad
+		background-color rgba($black, 0.6)
+	&__informacion
+		display flex
+		justify-content center
+		flex-direction column
+		padding 3rem 1rem
+		+above($bp4)
+			padding 0 1rem
+		span
+		strong
+			display block
+			text-align left
+			line-height 1
+			text-align center
+			+above($bp4)
+				text-align left
+		span
+			font-size 1.7rem
+			+above($bp3)
+				font-size 2.5rem
+			+above($bp4)
+				font-size 2rem
+			+above($bp5)
+				font-size 2.5rem
+		strong
+			text-transform uppercase
+			font-size 2rem
+			+above($bp3)
+				font-size 3.5rem
+			+above($bp4)
+				font-size 3.2rem
+			+above($bp5)
+				font-size 3.5rem
+		
+		
+	&__numeros
+		display flex
+		justify-content center
+		flex-wrap wrap
+		div
+			padding 2rem 0
+			width 40%
+			max-width 290px
+			margin 1rem
 			text-align center
 			span
 			strong
 				display block
-				font-size 1.2rem
-				margin 1rem 0.5rem
 			span
-				font-size 2.5rem
-	.isa
-		background-color $basecolor
-		color $white
-		.box
-			align-items center
-			display flex
-			flex-direction column
-			justify-content space-between
-			padding 1rem
-			+above($bp3)
-				flex-direction row
-		a
-			color $white
-		&__left
-			font-size 0.9rem
-		&__right
-			margin-top 1rem
-			+above($bp3)
-				margin-top 0
-			ul
-				display flex
-				li
-					margin 0 0.5rem
-			a
-				
-				font-size 1.6rem
-				&:hover
-					color $secondary
-					text-decoration none
+				font-size 1.4rem
+				text-transform uppercase
+			strong
+				font-size 4rem
+			
+		 
+		
+
+.footer
+	gradiente()
+	color $white
+	.box
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+		padding 3rem 0
+		box-interno()
+	&__item
+		text-align center
+		span
+		strong
+			display block
+			font-size 1.2rem
+			margin 1rem 0.5rem
+		span
+			font-size 2.5rem
+	
 
 .header
 	overflow hidden
@@ -118,7 +195,7 @@ body
 	
 	&__top
 		align-items center
-		background linear-gradient(left, $basecolor 0%, $basecolor-light 50%,  $basecolor 100%)
+		gradiente()
 		display flex
 		flex-wrap wrap
 		justify-content space-between
@@ -155,6 +232,28 @@ body
 				span
 					background-color $basecolor
 
+.porque
+	background-color #EEEEEE
+	text-align center
+	padding 5rem 0
+	.box
+		box-interno()
+		display flex
+		justify-content space-around
+		flex-direction column
+		+above($bp3)
+			flex-direction row
+	&__item
+		wide-max(360px)
+		figure
+			wide-max(100px)
+		+above($bp3)
+			width 28%
+			max-width 100%
+
+.comoFunciona
+	background-color #F5F5F5
+
 .proximoCurso
 	text-transform uppercase
 	padding 0.5rem 1rem
@@ -178,10 +277,32 @@ body
 	text-indent -99999px
 	width 170px
 
+.llamadaAccion
+	gradiente()
+	color $white
+	.box
+		display flex
+		justify-content space-between
+		align-items center
+		flex-direction column-reverse
+		+above($bp3)
+			flex-direction row
+	&__informacion
+		width 95%
+		font-size 1.7rem
+		text-align center
+		margin-bottom 3rem
+		+above($bp3)
+			width 42%
+			font-size 1.91rem
+			margin-bottom 0
+
+
 .ultimosCursos
-	box-shadow 0px 10px 15px $darkgrey
+	box-shadow 0px 8px 14px $lightgrey
 	relative top left
 	z-index 2
+	padding 4rem 0
 	&__imagen
 		position relative
 		figcaption
@@ -194,8 +315,27 @@ body
 			background-color rgba(0,0,0,0.7)
 			height 100px
 			color $white
+			font-style normal
 	.banderaCategoria
 		display none
+		+above($bp3)
+			display block
+			absolute top left
+			background-color $white
+			font-family $basefont
+			font-weight bold
+			color $darkergrey
+			padding 0 0.8rem
+			&:before
+				content ""
+				width 8px
+				height 22px
+				background-color #FF4842
+				absolute top bottom left -8px
+			&--azul
+				&:before
+					background-color #5F7C8A
+
 	+above($bp3)
 		.box
 			display flex
@@ -205,12 +345,12 @@ body
 		&__items
 			width 50%
 			margin 5px
-		&__items
 			display flex
 			flex-wrap wrap
 			article
 				width 46.7%
 				margin 9px 7px
+				position relative
 
 
 	
@@ -246,6 +386,8 @@ body
 			.title
 				font-size 3.5rem
 				text-shadow 3px 4px 5px $black
+				color $white
+				text-align left
 				&--secundary
 					font-size 1.5rem
 					max-width 800px
@@ -254,6 +396,23 @@ body
 					margin-top 1rem
 			+above($bp4)
 				font-size 1.5rem
+
+.title
+	color #333333
+	text-align center
+	&--main
+		wide-max(520px)
+		relative left
+		font-size 1.5rem
+		font-family: $altfont
+		&:before
+			width 5px
+			height 40px
+			content ""
+			background-color $secondary
+			display block
+			absolute top bottom left
+			border-radius 5px
 
 
 
