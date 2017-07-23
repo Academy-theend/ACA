@@ -11,17 +11,15 @@
  */
 .btn
 	background-color transparent
-	border none
+	border 2px solid $basecolor
 	border-radius $radius
-	color $textcolor
-	color $white
+	color $basecolor
 	cursor pointer
 	display inline-block
 	font-size 100%
-	font-weight normal
+	font-weight bold
 	line-height $baselineheight * 1.5
 	margin 0
-	padding-top 0
 	position relative
 	text-align center
 	transition: all 0.3s
@@ -29,9 +27,10 @@
 	white-space nowrap
    	letter-spacing 1px
    	padding-bottom 0
-   	padding-left 1em
-   	padding-right 1em
-
+   	padding-left 1.5rem
+   	padding-right 1.5rem
+	text-transform uppercase
+	min-width 150px
 	
 		
 
@@ -52,7 +51,7 @@
         outline none
 
     &:visited
-    	color $white
+    	color $basecolor
     &:after
 		content ""
 		absolute left 0 bottom 0
@@ -161,11 +160,23 @@ input[type="submit"].btn:hover
 * OK button
 */
 
+.btn--white
+	border 1px solid white
+	color white
+	text-transform lowercase
+	&:hover
+		color white
+
+	&:visited
+		color white
+	
+
 .btn--success
 	border 3px solid $color-success
 	color $color-success
-	font-size 2rem
+	font-size 1.2rem
 	line-height 1.5 !important
+	text-transform lowercase
 	&:hover
 		color lighten($color-success, 40%)
 
@@ -215,8 +226,12 @@ input[type="submit"].btn:hover
 		padding-right 1.5em
 	&--large
 		line-height 3
-		padding-left 3em
-		padding-right 3em
+		padding-left 2em
+		padding-right 2em
+		font-size 2rem
+		text-transform uppercase
+		padding-top 0.5rem
+		padding-bottom 0.5rem
 
 
 /*------------------------------------*\

@@ -11,8 +11,12 @@ box()
 	padding 5rem 0.5rem
 
 box-interno()
-	padding-left 0
-	padding-right 0
+	padding-left 0.5rem
+	padding-right 0.5rem
+	padding-top 0
+	padding-bottom 0
+	+above($bp4)
+		padding 0
 
 wide-max(max-width)
 	margin-left auto

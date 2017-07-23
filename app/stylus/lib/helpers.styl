@@ -20,6 +20,14 @@
 	list-style none
 	margin 0
 
+.list
+	padding 0
+	list-style-position: inside;
+	&--especial
+		li
+			&:first-child
+				list-style-type: none
+
 .margin
 	&--big
 		margin $gutterwidth  0
@@ -43,6 +51,8 @@
 		color $basecolor
 	&--uppercase
 		text-transform uppercase
+	&--light
+		font-weight 300
 
 .z-index-uno
 	z-index 1

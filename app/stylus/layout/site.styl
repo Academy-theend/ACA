@@ -19,9 +19,12 @@ body
 * From here it is where you must write the positioning styles
 * and details that form your web. Enjoy!
 */
+
+		
 .coursesCountDown
 	display none
 	background-color #EBEBEB
+
 	+above($bp3)
 		display block
 		.box
@@ -30,6 +33,8 @@ body
 			height 110px
 			overflow hidden
 			box-interno()
+			padding-top 0
+			padding-bottom 0
 		&__item
 			flex 1 1 33%
 			span
@@ -39,25 +44,55 @@ body
 			display flex
 			align-items center
 			
+	
+	
+	
+	
 	.dia
 		font-size 3rem
 		border-bottom 2px solid $superdark
 	.mes
 		font-size 2rem
+	&__fecha
+		color #001326
+		line-height 1
+		
 	&__informacion
 		margin-left 2rem
+		line-height 1
+		
 		span
 			font-size 1.4rem
 			display block
 			width 250px
 			color #515151
 			text-align left
-			margin-top 0.5rem
+			margin-top 1.2rem
 			font-family $altfont
 			font-weight 700
+	&__avaliables
+		color: #333333
+		font-size 1.4rem
+		font-weight bold
+		position relative
+		&:before
+			content ""
+			display block
+			width 2px
+			height: 45px
+			background-color #CACACA
+			absolute top 15px left 0
+		.quantity
+			font-size 2.3rem
+			
 
 .enterate
-	background-color #eeeeee
+	background-color #EEEEEE
+	padding-top $paddingSection
+	padding-bottom $paddingSection
+	
+	.header
+		margin-bottom 3rem
 	.box
 		box-interno()
 		display flex
@@ -76,18 +111,46 @@ body
 			figure
 				display flex
 				flex-direction column
+			+above($bp3)
+				background-color #EEEEEE
+				padding 0 2rem 0 0
+				border-radius 10px
+				overflow hidden
+				figure
+					position relative
+					border-radius 10px
+					overflow hidden
+					figcaption
+						absolute bottom 25px left 0
+						width 70%
+						padding 0.5rem
+						background-color rgba(#EEEEEE, 0.8)
+						color #3E3E3E
 			
 		&--derecho
 			article
 				background-color $white
 				display flex
-				margin 1rem 0
+				margin 0.5rem 0
 				flex-direction column
 				padding 2rem 1rem
 				&:first-child
 					margin-top 0
 				+above($bp4)
 					flex-direction row-reverse
+					padding 0
+					figure
+						width 74.5%
+	&__informacion
+		padding 1rem 1rem 0 1rem
+		p
+			color #8F8F8F
+			font-size 1.2rem
+			padding-right 0.5rem
+			line-height: 1.1	
+		h3
+			line-height: 1.2
+					
 
 				
 			
@@ -172,21 +235,35 @@ body
 .footer
 	gradiente()
 	color $white
+	padding-top $paddingSection
+	padding-bottom $paddingSection
+	font-size 1.2rem
+	text-align center
+	+above($bp3)
+		text-align left
 	.box
+		box-interno()
 		display flex
 		flex-wrap wrap
-		justify-content space-around
-		padding 3rem 0
-		box-interno()
-	&__item
-		text-align center
-		span
-		strong
-			display block
-			font-size 1.2rem
-			margin 1rem 0.5rem
-		span
-			font-size 2.5rem
+		
+		align-items center
+		flex-direction column
+		+above($bp3)
+			flex-direction row
+			justify-content space-around
+			align-items flex-start
+		.information__item
+			width 100%
+			margin-top 1rem
+			&:first-child
+				margin-top 0
+			+above($bp1)
+				flex 1 1 33%	
+				margin-top 0		
+
+	
+		
+	
 	
 
 .header
@@ -235,7 +312,12 @@ body
 .porque
 	background-color #EEEEEE
 	text-align center
-	padding 5rem 0
+	padding-top $paddingSection
+	padding-bottom $paddingSection
+	.header
+		margin-bottom 2rem
+		+above($bp3)
+			margin-bottom 5rem
 	.box
 		box-interno()
 		display flex
@@ -245,18 +327,46 @@ body
 			flex-direction row
 	&__item
 		wide-max(360px)
+		margin-bottom 3rem
+		&:last-child
+			margin-bottom 0
+		+above($bp2)
+			width 21%
 		figure
 			wide-max(100px)
 		+above($bp3)
 			width 28%
 			max-width 100%
+	&__description
+		font-size 1.1rem
+		margin-top 0.5rem
+		margin-bottom 2rem
 
 .comoFunciona
 	background-color #F5F5F5
+	.porque__item
+		margin-bottom 3rem
+		&:last-child
+			margin-bottom 0
+		+above($bp2)
+			width 21%
+		
+
+
+	
+
+.metodosPago
+	display flex
+	justify-content center
+	+above($bp1)
+		justify-content flex-start
+	li
+		width 8%
+		margin 0 0.2rem
 
 .proximoCurso
 	text-transform uppercase
-	padding 0.5rem 1rem
+	padding 0.5rem 1.5rem
 
 .iniciaClases
 	background-color $secondary
@@ -266,6 +376,8 @@ body
 	display flex
 	flex-direction column
 	justify-content center
+	font-size: 1.5rem
+	
 
 
 .logo
@@ -282,7 +394,7 @@ body
 	color $white
 	.box
 		display flex
-		justify-content space-between
+		justify-content center
 		align-items center
 		flex-direction column-reverse
 		+above($bp3)
@@ -294,15 +406,22 @@ body
 		margin-bottom 3rem
 		+above($bp3)
 			width 42%
-			font-size 1.91rem
+			font-size 1.6rem
 			margin-bottom 0
+			margin-left 10rem
 
 
 .ultimosCursos
 	box-shadow 0px 8px 14px $lightgrey
 	relative top left
 	z-index 2
-	padding 4rem 0
+	.box
+		box-interno()
+		padding 0
+	+above($bp3)
+		padding-top $paddingSection
+		padding-bottom $paddingSection
+	
 	&__imagen
 		position relative
 		figcaption
@@ -316,11 +435,16 @@ body
 			height 100px
 			color $white
 			font-style normal
+			h3
+				margin-bottom 0.5rem
+				font-size 1.3rem
+				font-weight: 300
+			
 	.banderaCategoria
 		display none
 		+above($bp3)
 			display block
-			absolute top left
+			absolute top 10px left
 			background-color $white
 			font-family $basefont
 			font-weight bold
@@ -332,6 +456,7 @@ body
 				height 22px
 				background-color #FF4842
 				absolute top bottom left -8px
+				z-index 2
 			&--azul
 				&:before
 					background-color #5F7C8A
@@ -341,16 +466,39 @@ body
 			display flex
 			justify-content space-between
 			box-interno()
-		&__destacado
 		&__items
-			width 50%
-			margin 5px
 			display flex
 			flex-wrap wrap
+			flex 1 1 50%
+			margin-bottom 3rem
 			article
-				width 46.7%
-				margin 9px 7px
+				width 100%
+				max-width 313px
+				height 163px
+				margin 7px 10px
 				position relative
+				&:nth-child(1)
+				&:nth-child(2)
+					margin-top 0
+				&:nth-child(1)
+				&:nth-child(3)
+					margin-left 0
+				&:nth-child(2)
+				&:nth-child(4)
+					margin-right 0
+				
+		&__destacado
+			max-width 590px
+			max-height: 340px
+			margin-right 20px
+			display flex
+			flex-wrap wrap
+			flex 1 1 50%
+		
+		
+			
+				
+			
 
 
 	
@@ -397,14 +545,35 @@ body
 			+above($bp4)
 				font-size 1.5rem
 
+.seccion
+	&__description
+		color #616161
+		font-size 1rem;
+		wide-max(680px)
+		font-family $altfont
+
+.redesSociales
+	display flex
+	justify-content center
+	+above($bp3)
+		justify-content flex-start
+	li
+		margin 0 0.2rem
+		a
+			color #EEC5B0
+			font-size: 1.7rem
+			&:hover
+				text-decoration none
+
 .title
 	color #333333
 	text-align center
 	&--main
-		wide-max(520px)
+		wide-max(590px)
 		relative left
-		font-size 1.5rem
+		font-size 1.6em
 		font-family: $altfont
+		margin-bottom 2rem
 		&:before
 			width 5px
 			height 40px
@@ -413,6 +582,19 @@ body
 			display block
 			absolute top bottom left
 			border-radius 5px
+	&--mainMini
+		wide-max(300px)
+	&--item
+		font-size 1.3rem
+		margin-bottom 1rem
+	&--contact
+		font-size 1.5em
+		font-family: $altfont
+		margin-bottom 2rem
+		color #fff
+		font-weight: 300
+		+above($bp3)
+			text-align left
 
 
 
