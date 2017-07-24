@@ -42,6 +42,7 @@ gulp.task('pug', function(){
                 dev_path.pug + 'blog.pug',
                 dev_path.pug + 'cursos.pug',
                 dev_path.pug + 'quienes.pug',
+                dev_path.pug + 'faq.pug',
                 dev_path.pug + 'single.pug',
                 dev_path.pug + 'contactanos.pug'])
         .pipe(pug({pretty: true}))
