@@ -43,6 +43,10 @@
 	ul
 		display block
 		padding 0
+		li
+			&.current_page_item
+				a
+					border-bottom 3px solid $secondary
 		a
 			display block
 			padding 0.5rem 1rem
@@ -65,7 +69,8 @@
 					
 					
 					outline none
-					border-bottom 2px solid $secondary
+					border-bottom 3px solid $secondary
+				
 				
 	&--main
 		display none

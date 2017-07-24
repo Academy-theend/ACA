@@ -1,6 +1,17 @@
 include templates-parts/header.pug
 main.main
-    include templates-parts/slider.pug
-    include templates-parts/slider.pug
+    section.contactanos.bg__mapa
+        article.contactanos__form
+            h2 Contáctanos!
+            form.formulario
+                input(type="text",placeholder="Cúal es tu nombre?")
+                input(type="text",placeholder="Telefono")
+                input(type="text",placeholder="Ciudad")
+                input(type="text",placeholder="Correo Electronico")
+                textarea(name="Mensaje", cols="30", rows="10",placeholder="Mensaje")
+                input(type="submit", value="Enviar", class="btn btn--form")
+        article.contactanos__mapa
+            
+    
     
 include templates-parts/footer.pug
