@@ -35,24 +35,38 @@ body
 		padding-top 3rem
 	.blogArticles
 	.asideArticles
-		flex 1 1 70%
+		+above($bp3)
+			flex 1 1 70%
 	
 	.blogArticles
-		flex-basis 62%
-		margin-right 2%
 		padding 0 1rem
-		
+		+above($bp3)
+			flex-basis 62%
+			margin-right 2%
+				
 	.asideRight
-		flex-basis 28%
+		display none
+		+above($bp3)
+			display block
+			flex-basis 28%
 	
 	&__information
 		h4
 			font-size: 1.5rem
+			margin-top 1rem
+			+above($bp4)
+				margin-top 0
 		h2
 			
-			font-size 2.5rem
+			font-size 1.8rem
 			text-transform: uppercase
 			margin 2rem 0
+			+above($bp3)
+				font-size 2rem
+				margin 0
+			+above($bp4)
+				font-size 2.5rem
+				margin 2rem 0
 			a
 				color #666666
 				&:hover
@@ -60,34 +74,51 @@ body
 		p
 			font-weight: 300
 			font-size: 1rem
+			+above($bp3)
+				font-size 0.9rem
 		
 	&__item
-		display flex
 		margin 2rem 0
 		border-bottom 1px solid #CDCDCD
 		padding-bottom 1rem
+		+above($bp4)
+			display flex
 		&--sidebar
-			padding 1rem
+			padding 0.5rem
 			border-bottom 0
+			margin 1rem 0
+			+above($bp4)
+				padding 1rem	
 			.blog__information
 				margin-left 0.5rem
 				h6
 					color #BBBBBB
 					font-size 0.8rem
-					margin-bottom 1.3rem
+					margin 0.5rem 0
+					+above($bp4)
+						margin-bottom 1.3rem
+					
+						
 				h1
-					font-size 1.3rem
+					
 					text-transform uppercase
 					color #666666
-					margin-bottom 1rem
+					font-size: 1rem
+					margin-bottom 0
+					+above($bp4)
+						font-size 1.3rem
+						margin-bottom 1rem
 				h4
 					font-size 1.1rem
+					margin-top 0
 	&__imagen
 	&__information
-		flex 1 1 57%
+		+above($bp3)
+			flex 1 1 57%
 	&__imagen
-		flex-basis 37.5%
-		margin-right 2%
+		+above($bp3)
+			flex-basis 37.5%
+			margin-right 2%
 	
 	
 .contactanos
@@ -451,25 +482,46 @@ body
 		border-bottom 2px solid #CDCDCD
 		margin-bottom 1.5rem
 		padding-bottom 2.1rem
-		font-size 2rem
+		font-size 1.8rem
 		color #838383
+		+above($bp1)
+			font-size 2rem
 	figure
 		position relative
+		width: 100%
+		height 150px
+		background-color #CDCDCD
+		+above($bp3)
+			height: auto
+		img
+			display: none
+			+above($bp3)
+				display block
 		figcaption
 			width 100%
 			absolute bottom 15% left 0
 			text-align center
-		h5
-			font-size 1.6rem
 			font-style normal
-			margin-bottom 2rem
+		h5
+			font-size 1.1rem
 			color #666666
+			margin-bottom 0.3rem
+			text-transform: capitalize
+			+above($bp3)
+				font-size 1.3rem
+			+above($bp4)
+				margin-bottom 2rem
+				font-size 1.6rem
 		&:before
 			content ""
 			width: 100%
 			height: 100%
 			background-color rgba(255,255,255,0.7)
 			absolute left right top bottom
+	.hidden
+		display none
+		+above($bp3)
+			display inline-block
 
 
 	
@@ -501,6 +553,10 @@ body
 	max-width 296px
 	margin 0.5rem 0 0.5rem 1.5rem
 	width 100%
+	+above($bp3)
+		max-width: 230px
+	+above($bp3)
+		max-width: 296px
 	
 
 
@@ -737,6 +793,7 @@ body
 .widget
 	margin 1.5rem 0
 	border 2px solid #EFEFEF
+	overflow hidden
 	&.search
 		border 0
 		margin-top 0

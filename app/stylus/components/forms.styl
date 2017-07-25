@@ -259,7 +259,12 @@ input:-moz-placeholder
 .form-inline select
 	display inline-block
 	margin-bottom 0
-	width: 24%
+	width: 90%
+	padding 0.5rem
+	+above($bp3)
+		width 28%
+	+above($bp4)
+		padding 1rem
 
 
 .form-inline label
