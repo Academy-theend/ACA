@@ -1,6 +1,56 @@
+include mixins/mixin.pug
 include templates-parts/header.pug
-main.main
-    include templates-parts/home/slider.pug
+main.main.blog
+    .box.blog__container
+        section.blogArticles
+            header.mailing
+                h3 Articulos recientes
+                figure
+                    img(src="img/archive-blog.jpg", alt="Blog")
+                    figcaption
+                        h5 Enterate de lo nuevo, copy conversión correo
+                        form.form-inline
+                            input(type="text",placeholder="Nombre")
+                            input(type="text",placeholder="Correo electronico")
+                            input(type="submit",value="Suscribirme ahora", class="btn btn--form btn--form--inline")
+            
+            //- Articulos
+            
+            +articulo
+            +articulo
+            +articulo
+            +articulo
+            
+        aside.aside.asideRight
+            .widget.search
+                form.form-search
+                    input(type="search", name="busqueda",placeholder="Busca articulos y conceptos")
+            .widget
+                h3.text-center Categorias
+                ul
+                    li
+                        a(href="#") Categoria 1
+                    li.activado
+                        a(href="#") Categoria 2
+                        ul
+                            li
+                                a(href="#") Sucategoria 1
+                            li
+                                a(href="#") Sucategoria 2
+                    li
+                        a(href="#") Categoria 3
+                    li
+                        a(href="#") Categoria 4
+            .widget
+                h3.text-center Artículos Populares
+                +articuloSidebar
+                +articuloSidebar
+                +articuloSidebar
+                +articuloSidebar
+                +articuloSidebar
+                +articuloSidebar
+                +articuloSidebar
+
     
     
 include templates-parts/footer.pug

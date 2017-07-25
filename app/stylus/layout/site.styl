@@ -25,6 +25,71 @@ body
 		background-image url("../img/mapa-fondo.png")
 		background-size cover
 		background-position center
+.blog
+	background-color #eeeeee
+	padding-bottom 3rem
+	.box
+		display flex
+	&__container
+		background-color white
+		padding-top 3rem
+	.blogArticles
+	.asideArticles
+		flex 1 1 70%
+	
+	.blogArticles
+		flex-basis 62%
+		margin-right 2%
+		padding 0 1rem
+		
+	.asideRight
+		flex-basis 28%
+	
+	&__information
+		h4
+			font-size: 1.5rem
+		h2
+			
+			font-size 2.5rem
+			text-transform: uppercase
+			margin 2rem 0
+			a
+				color #666666
+				&:hover
+					text-decoration none
+		p
+			font-weight: 300
+			font-size: 1rem
+		
+	&__item
+		display flex
+		margin 2rem 0
+		border-bottom 1px solid #CDCDCD
+		padding-bottom 1rem
+		&--sidebar
+			padding 1rem
+			border-bottom 0
+			.blog__information
+				margin-left 0.5rem
+				h6
+					color #BBBBBB
+					font-size 0.8rem
+					margin-bottom 1.3rem
+				h1
+					font-size 1.3rem
+					text-transform uppercase
+					color #666666
+					margin-bottom 1rem
+				h4
+					font-size 1.1rem
+	&__imagen
+	&__information
+		flex 1 1 57%
+	&__imagen
+		flex-basis 37.5%
+		margin-right 2%
+	
+	
 .contactanos
 	
 	&__form
@@ -287,7 +352,9 @@ body
 				margin-top 0
 			+above($bp1)
 				flex 1 1 33%	
-				margin-top 0		
+				margin-top 0
+			a
+				color white	
 
 	
 		
@@ -378,7 +445,31 @@ body
 			margin-bottom 0
 		+above($bp2)
 			width 21%
-		
+
+.mailing
+	h3
+		border-bottom 2px solid #CDCDCD
+		margin-bottom 1.5rem
+		padding-bottom 2.1rem
+		font-size 2rem
+		color #838383
+	figure
+		position relative
+		figcaption
+			width 100%
+			absolute bottom 15% left 0
+			text-align center
+		h5
+			font-size 1.6rem
+			font-style normal
+			margin-bottom 2rem
+			color #666666
+		&:before
+			content ""
+			width: 100%
+			height: 100%
+			background-color rgba(255,255,255,0.7)
+			absolute left right top bottom
 
 
 	
@@ -643,6 +734,41 @@ body
 		font-weight: 300
 		+above($bp3)
 			text-align left
+.widget
+	margin 1.5rem 0
+	border 2px solid #EFEFEF
+	&.search
+		border 0
+		margin-top 0
+	h3
+		margin 2rem 0
+		color #666666
+		font-size 1.5rem
+	ul
+		list-style-type none
+		padding-left 0
+		li
+			border-top 1px solid #F1F1F1
+			border-bottom 1px solid #F1F1F1
+			a
+				display block
+				padding 0.6rem
+				color #666666
+				&:hover
+				&:visited
+					background-color #FFB197
+					color white
+			&.activado
+				> a
+					color #FFB197
+					text-decoration none
+					&:hover
+					&:visited
+						color white
+			ul
+				li
+					a
+						padding-left 2rem
 
 
 
