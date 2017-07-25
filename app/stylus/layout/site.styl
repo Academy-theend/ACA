@@ -25,6 +25,29 @@ body
 		background-image url("../img/mapa-fondo.png")
 		background-size cover
 		background-position center
+.breadcrumbs
+	background-color black
+	.box
+		box-interno()
+	ul
+		display flex
+		li
+			&.disabled
+				a
+					color #EEEEEE
+					opacity 0.5
+					cursor default
+					text-decoration none
+		a
+			display block
+			margin 0.2rem 0.5rem
+			color $secondary
+			font-size 0.8rem
+			
+			&:after
+				content " / "
+		
+		  
 .blog
 	background-color #eeeeee
 	padding-bottom 3rem
@@ -204,6 +227,102 @@ body
 			absolute top 15px left 0
 		.quantity
 			font-size 2.3rem
+
+.cursos
+	background-color #EEEEEE
+	&__buscador
+		box-shadow 0px 8px 14px $lightgrey
+		background-color #fff
+		margin-bottom 3px
+		position relative
+		z-index 2
+		padding 1rem 0 0
+		.buscador
+			wide-max(870px)
+			input
+				background-color #F5F7F8
+				border-radius 0
+				border 0
+	&__box
+		wide-max(1200px)
+		display flex
+	&__sidebarLeft
+	&__items
+		flex 1 1 85%
+		background-color #fff
+	&__sidebarLeft
+		flex-basis 15%
+		background-color #EEEEEE
+		display none
+		margin-top 2.5rem
+		+above($bp3)
+			display block
+			li
+				position relative
+				margin 2rem 0
+				
+				&:before
+					content " "
+					background-color #990000
+					width 12px
+					height: 21px;
+					display block
+					absolute left -30px top
+				a
+					text-decoration none
+					color #666666
+				&.todas
+					background-color #E7E7E7
+					padding 0.5rem
+					&:before
+						background-color transparent
+				&.guion
+					&:before
+						background-color $secondary
+				&.audiovisual
+					&:before
+						background-color #A75BB5
+					
+	// Listado de cursos
+	&__items
+		display flex
+		flex-wrap wrap
+		padding 2rem 0
+	&__item
+		flex 1 1 31%
+		margin 0.5rem
+		box-shadow 1px 2px 10px $lightgrey
+		border 1px solid $lightgrey
+	&__informacion
+		padding 1rem
+		h2
+			font-size 1.2rem
+			color #3F3F3F
+			line-height: 1.2
+		p
+			font-size 0.9rem
+			color #B0B0B0
+	&__imagen
+		position relative
+		figcaption
+			absolute top 10px left 0
+			background-color: #fff;
+			font-family: 'Roboto', sans-serif;
+			font-weight: bold;
+			color: #262626;
+			padding: 0.15rem 1.8rem 0.15rem 0.9rem;
+			font-style: normal
+			font-size 0.8rem
+			&:before
+				content: "";
+				width: 8px;
+				height: 22px;
+				background-color: #990000;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -8px;
+				z-index: 2;
 			
 
 .enterate

@@ -1,6 +1,42 @@
 include templates-parts/header.pug
-main.main
-    include templates-parts/home/slider.pug
+include mixins/mixin.pug
+main.main.cursos
+    include templates-parts/breadcrumbs.pug
+    aside.cursos__buscador
+        form(action="",method="POST", class="buscador")
+            input(type="search", name="",placeholder="Quiero aprender nuevas habilidades en: (Guíon, Audiovisual, Producción)")
+    section.cursos__box
+        aside.cursos__sidebarLeft
+            h3.text--uppercase Categorias
+            ul.list-none
+                li.todas Todas
+                li.guion
+                    a(href="#") Guion
+                li.audiovisual
+                    a(href="#") Audiovisual
+                li.produccion
+                    a(href="#") Producción
+                li.categoria
+                    a(href="#") Categoria
+                li.categoria
+                    a(href="#") Categoria
+                li.categoria
+                    a(href="#") Categoria
+                li.categoria
+                    a(href="#") Categoria
+                li.categoria
+                    a(href="#") Categoria
+                li.categoria
+                    a(href="#") Categoria
+        div.cursos__items
+            +listadoCursos
+            +listadoCursos
+            +listadoCursos
+            +listadoCursos
+            +listadoCursos
+            +listadoCursos
+            
+           
     
     
 include templates-parts/footer.pug

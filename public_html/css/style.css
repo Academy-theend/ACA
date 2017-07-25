@@ -676,6 +676,13 @@ a:active {
 .btn.hover:after {
   height: 100%;
 }
+.btn--center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 140px;
+  margin-top: 1.5rem;
+}
 input[type="submit"].btn:hover {
   border-color: #0f323c;
 }
@@ -1603,6 +1610,43 @@ body {
   background-size: cover;
   background-position: center;
 }
+.breadcrumbs {
+  background-color: #000;
+}
+.breadcrumbs .box {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 64em) {
+  .breadcrumbs .box {
+    padding: 0;
+  }
+}
+.breadcrumbs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.breadcrumbs ul li.disabled a {
+  color: #eee;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  cursor: default;
+  text-decoration: none;
+}
+.breadcrumbs ul a {
+  display: block;
+  margin: 0.2rem 0.5rem;
+  color: #7fc719;
+  font-size: 0.8rem;
+}
+.breadcrumbs ul a:after {
+  content: " / ";
+}
 .blog {
   background-color: #eee;
   padding-bottom: 3rem;
@@ -1884,6 +1928,154 @@ body {
   .coursesCountDown .box {
     padding: 0;
   }
+}
+.cursos {
+  background-color: #eee;
+}
+.cursos__buscador {
+  -webkit-box-shadow: 0px 8px 14px #bfbfbf;
+  box-shadow: 0px 8px 14px #bfbfbf;
+  background-color: #fff;
+  margin-bottom: 3px;
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+.cursos__buscador .buscador {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 870px;
+  width: 100%;
+  display: block;
+}
+.cursos__buscador .buscador input {
+  background-color: #f5f7f8;
+  border-radius: 0;
+  border: 0;
+}
+.cursos__box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: 100%;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.cursos__sidebarLeft,
+.cursos__items {
+  -webkit-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -ms-flex: 1 1 85%;
+  flex: 1 1 85%;
+  background-color: #fff;
+}
+.cursos__sidebarLeft {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  background-color: #eee;
+  display: none;
+  margin-top: 2.5rem;
+}
+@media only screen and (min-width: 48em) {
+  .cursos__sidebarLeft {
+    display: block;
+  }
+  .cursos__sidebarLeft li {
+    position: relative;
+    margin: 2rem 0;
+  }
+  .cursos__sidebarLeft li:before {
+    content: " ";
+    background-color: #900;
+    width: 12px;
+    height: 21px;
+    display: block;
+    position: absolute;
+    left: -30px;
+    top: 0;
+  }
+  .cursos__sidebarLeft li a {
+    text-decoration: none;
+    color: #666;
+  }
+  .cursos__sidebarLeft li.todas {
+    background-color: #e7e7e7;
+    padding: 0.5rem;
+  }
+  .cursos__sidebarLeft li.todas:before {
+    background-color: transparent;
+  }
+  .cursos__sidebarLeft li.guion:before {
+    background-color: #7fc719;
+  }
+  .cursos__sidebarLeft li.audiovisual:before {
+    background-color: #a75bb5;
+  }
+}
+.cursos__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.cursos__item {
+  -webkit-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -ms-flex: 1 1 31%;
+  flex: 1 1 31%;
+  margin: 0.5rem;
+  -webkit-box-shadow: 1px 2px 10px #bfbfbf;
+  box-shadow: 1px 2px 10px #bfbfbf;
+  border: 1px solid #bfbfbf;
+}
+.cursos__informacion {
+  padding: 1rem;
+}
+.cursos__informacion h2 {
+  font-size: 1.2rem;
+  color: #3f3f3f;
+  line-height: 1.2;
+}
+.cursos__informacion p {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+.cursos__imagen {
+  position: relative;
+}
+.cursos__imagen figcaption {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #262626;
+  padding: 0.15rem 1.8rem 0.15rem 0.9rem;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+.cursos__imagen figcaption:before {
+  content: "";
+  width: 8px;
+  height: 22px;
+  background-color: #900;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -8px;
+  z-index: 2;
 }
 .enterate {
   background-color: #eee;
