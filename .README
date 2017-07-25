@@ -1,0 +1,22 @@
+# The end Academy
+
+In this web development where we not use simply HTML, CSS and JAVASCRIPT or we have a more advanced alternative where we use PUG, STYLUS, GULP among other things.
+
+## Installation Advanced Developers
+
+To use this template, your computer needs:
+
+- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
+- [Git](https://git-scm.com/)
+- [PUG](https://pugjs.org/)
+
+### Manual Setup
+
+Then open the folder app in your command line, and install the needed dependencies:
+
+```bash
+cd app
+npm install
+```
+
+Finally type the name of the `gulp` task in the console to compile Stylus + PUG and execute all the tasks created in the gulpfile.js

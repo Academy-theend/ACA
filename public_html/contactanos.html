@@ -4,42 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>The End Academy</title>
-    <meta name="description" content="My name is  Isabella, the owner &amp; photographer of Isabella photography. I am based in San Francisco, United States.">
+    <meta name="description" content="The End Academy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico in the root directory-->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="img/manifest.json">
-    <meta property="og:description" content="My name is  Isabella, the owner &amp; photographer of Isabella photography. I am based in San Francisco, United States.">
-    <meta property="og:image" name="thumb" content="img/og.jpg">
-    <meta property="og:title" content="Isabella – Interactive Digital Experiences">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://adatheme.com">
-    <meta property="og:site_name" content="Isabella – Interactive Digital Experiences">
-    <meta name="description" content="My name is  Isabella, the owner &amp; photographer of Isabella photography. I am based in San Francisco, United States.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="http://adatheme.com">
-    <meta name="twitter:creator" content="@adatheme">
-    <meta name="twitter:title" content="Isabella – Interactive Digital Experiences">
-    <meta name="twitter:description" content="The work of Interactive Art Director and Designer Isabella.">
-    <meta name="twitter:image:src" content="img/og.jpg">
     <meta name="msapplication-TileColor" content="#2c3e50">
-    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
     <meta name="theme-color" content="#2c3e50">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Roboto:300,400,500,700,900" rel="stylesheet">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -49,11 +19,11 @@
         <!-- Incluimos el menu de navegación-->
         <nav class="nav nav--main" data-id="1">
           <ul class="list-none">
-            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="quienes-somos.html">Quienes Somos</a></li>
-            <li><a href="contactanos.html">Contáctanos</a></li>
+            <li><a href="quienes.html">Quienes Somos</a></li>
+            <li class="current_page_item"><a href="contactanos.html">Contáctanos</a></li>
           </ul>
         </nav>
       </div>
@@ -61,55 +31,59 @@
   </body>
 </html>
 <main class="main">
-  <div class="slider">
-    <figure><img class="img-responsive" src="img/slider.jpg" alt="Slider" width="1600" height="645">
-      <div class="slider--message">
-        <h4 class="title">Crea la trama perfecta.</h4>
-        <h4 class="title title--secundary">Conoce como elaborar la idea inicial, la construcción de los personajes e impulsa tu profesión como guionista.</h4>
-      </div>
-    </figure>
-  </div>
-  <div class="slider">
-    <figure><img class="img-responsive" src="img/slider.jpg" alt="Slider" width="1600" height="645">
-      <div class="slider--message">
-        <h4 class="title">Crea la trama perfecta.</h4>
-        <h4 class="title title--secundary">Conoce como elaborar la idea inicial, la construcción de los personajes e impulsa tu profesión como guionista.</h4>
-      </div>
-    </figure>
-  </div>
-</main>
-<footer class="footer scrollto" id="contactus">
-  <div class="footer__item text-center text-white">
-    <section class="footer__form">
-      <h6 class="title title--section">Contact Us</h6><span class="text text-center title title--secundary">Here you can contact me so that we can work together on all the wonderful projects that have in mind.</span>
-      <form class="form">
-        <input class="form--control" type="text" name="name" placeholder="Name">
-        <input class="form--control" type="text" name="phone" placeholder="Phone">
-        <input class="form--control" type="text" name="email" placeholder="E-mail">
-        <textarea class="form--control form--control--message" name="message" cols="10" rows="10" placeholder="Message"></textarea>
-        <input class="btn btn--slider btn--slider--white" type="submit" value="Submit">
+  <section class="contactanos bg__mapa">
+    <article class="contactanos__form">
+      <h2>Contáctanos!</h2>
+      <form class="formulario">
+        <input type="text" placeholder="Cúal es tu nombre?">
+        <input type="text" placeholder="Telefono">
+        <input type="text" placeholder="Ciudad">
+        <input type="text" placeholder="Correo Electronico">
+        <textarea name="Mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+        <input class="btn btn--form" type="submit" value="Enviar">
       </form>
-    </section>
-  </div>
-  <section class="information">
-    <div class="box">
-      <div class="information__item"><span class="isa-phone"></span><strong>+57 2 310547854</strong></div>
-      <div class="information__item"><span class="isa-location2"></span><strong>Street 4/1 022-282 San Francisco</strong></div>
-      <div class="information__item"><span class="isa-mail"></span><strong>hello@isabella.com</strong></div>
-    </div>
+    </article>
+    <article class="contactanos__mapa"></article>
   </section>
-  <div class="isa">
-    <div class="box">
-      <div class="isa__left">Copyright © 2016 <a href="http://www.adatheme.com/" target="_blank">AdaTheme</a>. All rights reserved.</div>
-      <div class="isa__right">
-        <ul class="list-none"></ul>
-      </div>
+</main>
+<footer class="footer">
+  <div class="box">
+    <div class="information__item">
+      <h5 class="title title--contact">FAQ</h5>
+      <ul class="list">
+        <li><a href="faq.html">¿Pregunta?</a></li>
+        <li><a href="faq.html">¿Pregunta?</a></li>
+        <li><a href="faq.html">¿Pregunta?</a></li>
+      </ul>
+    </div>
+    <div class="information__item">
+      <h5 class="title title--contact">Contáctanos</h5>
+      <ul class="list list--especial">
+        <li> 
+          <ul class="list-none redesSociales">
+            <li><a href="#"><i class="academy-facebook"></i></a></li>
+            <li><a href="#"><i class="academy-twitter"></i></a></li>
+            <li><a href="#"><i class="academy-pinterest"></i></a></li>
+            <li><a href="#"><i class="academy-google-plus"></i></a></li>
+            <li><a href="#"><i class="academy-vimeo-social"></i></a></li>
+            <li><a href="#"><i class="academy-instagram"></i></a></li>
+            <li><a href="#"><i class="academy-youtube"></i></a></li>
+          </ul>
+        </li>
+        <li>Correo TEA@TEA</li>
+        <li>Télefono: 555-555-555</li>
+        <li>Formulario de contacto</li>
+      </ul>
+    </div>
+    <div class="information__item">
+      <h5 class="title title--contact">Quiza te pueda interesar</h5>
+      <ul class="list">
+        <li>Metodos de pago
+          <figure class="img-payment"><img src="../img/metodos-pago.png" alt="Metodos de pago" width="293" height="26"></figure>
+        </li>
+        <li>¿Por que estudiar en TEA?</li>
+        <li>Deseo una clase gratis</li>
+      </ul>
     </div>
   </div>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="//cdn.jsdelivr.net/stickynavbar.js/1.3.2/jquery.stickyNavbar.min.js"></script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
 </footer>
